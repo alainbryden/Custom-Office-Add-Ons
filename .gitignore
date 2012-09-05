@@ -1,0 +1,17 @@
+#################
+## Excel-VBA
+#################
+
+# tortoise svn files
+.svn/
+
+
+############
+## Windows
+############
+
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
