@@ -1,4 +1,4 @@
-Attribute VB_Name = "Speed_Test"
+Attribute VB_Name = "Benchmarking"
 Option Explicit
 'Compare the speed of two functions
 Declare Function GetTickCount Lib "Kernel32" () As Long

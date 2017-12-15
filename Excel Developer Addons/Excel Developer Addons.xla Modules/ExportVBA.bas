@@ -1,4 +1,4 @@
-Attribute VB_Name = "ExportFunction"
+Attribute VB_Name = "ExportVBA"
 Option Explicit
 'Remember to add a reference to Microsoft Visual Basic for Applications Extensibility
 
@@ -11,11 +11,11 @@ Attribute ExportAllComponents.VB_ProcData.VB_Invoke_Func = " \n14"
 
     'Create the directory where code will be created.
     'Alternatively, you could change this so that the user is prompted
-    If ActiveWorkbook.Path = "" Then
+    If ActiveWorkbook.path = "" Then
         MsgBox "You must first save this workbook somewhere so that it has a path.", , "Error"
         Exit Sub
     End If
-    destDir = ActiveWorkbook.Path & "\" & ActiveWorkbook.Name & " Modules"
+    destDir = ActiveWorkbook.path & "\" & ActiveWorkbook.Name & " Modules"
     If Dir(destDir, vbDirectory) = vbNullString Then MkDir destDir
     
     'Export all non-blank components to the directory
