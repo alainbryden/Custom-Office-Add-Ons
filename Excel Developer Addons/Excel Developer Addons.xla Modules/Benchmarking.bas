@@ -1,7 +1,12 @@
 Attribute VB_Name = "Benchmarking"
 Option Explicit
+#If VBA7 Then
+    Private Declare PtrSafe Function GetTickCount Lib "Kernel32" ()
+#Else
+    Private Declare Function GetTickCount Lib "Kernel32"
+#End If
+
 'Compare the speed of two functions
-Declare Function GetTickCount Lib "Kernel32" () As Long
 Function TestSpeed() As String()
     Dim V1#, V2#
     Dim i As Long
